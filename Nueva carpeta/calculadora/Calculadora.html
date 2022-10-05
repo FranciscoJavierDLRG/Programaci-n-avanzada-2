@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<form>
+    <table>
+        <tr style="text-align:center;">
+            <td colspan="4">
+                <input id="resultado" type="text" value="0" size="20" /><input id="memoria" type="hidden" value="0" />
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td>
+                <input type="button" id="num7" value="7"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=7}else{ var str2='7'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num8" value="8"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=8}else{ var str2='8'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num9" value="9"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=9}else{ var str2='9'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="div" value="/" onClick="operaciones('dividir'); return false;">
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td>
+                <input type="button" id="num4" value="4"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=4}else{ var str2='4'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num5" value="5"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=5}else{ var str2='5'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num6" value="6"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=6}else{ var str2='6'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="mul" value="*" onClick="operaciones('multiplicar'); return false;">
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td>
+                <input type="button" id="num1" value="1"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=1}else{ var str2='1'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num2" value="2"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=2}else{ var str2='2'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="num3" value="3"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=3}else{ var str2='3'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td>
+                <input type="button" id="men" value="-" onClick="operaciones('restar'); return false;">
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td>
+                <input type="button" id="num0" value="0"
+                    onClick="var str1=document.getElementById('resultado').value; if(str1 == '0'){document.getElementById('resultado').value=0}else{ var str2='0'; var res = str1.concat(str2);document.getElementById('resultado').value=res;}">
+            </td>
+            <td colspan="2">
+                <input type="button" id="igual" value="=" onClick="operaciones('igual'); return false;">
+            </td>
+            <td>
+                <input type="button" id="mas" value="+" onClick="operaciones('sumar'); return false;">
+            </td>
+        </tr>
+    </table>
+</form>
+</html>
